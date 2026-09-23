@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Administración de los códigos QR de Coordina." />
+  <title>Admin | Códigos QR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+  <style>.brand-logo { width: 40px; height: 40px; object-fit: contain; display: block; }.admin-tagline { width: 200px; height: auto; display: block; }</style>
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <a class="brand" href="index.html" aria-label="Volver a la página pública"><img class="brand-logo" src="img/Logo%20Coordina.png" alt="" /><img class="admin-tagline" src="img/Nombre%20y%20eslogan.png" alt="Coordina, presente en lo que importa" /></a>
+      <a class="back-link" href="index.html">Ver página pública <span>↗</span></a>
+    </header>
+
+    <section class="admin-intro">
+      <p class="eyebrow"><span></span> Panel de administración</p>
+      <h1>Gestioná tus códigos QR.</h1>
+      <p>Subí las imágenes que querés mostrar y actualizá los enlaces de destino. Los cambios se aplican en esta vista y en la página pública.</p>
+    </section>
+
+    <form id="qr-form" class="qr-admin-grid">
+      <article class="admin-card">
+        <div class="card-heading"><span class="number">01</span><div><h2>QR informativo</h2><p>El código de presentación y consulta.</p></div></div>
+        <div class="preview-area"><div id="preview-info" class="preview-qr"></div><span class="file-state" id="state-info">Generado desde el enlace</span></div>
+        <label class="upload-field"><span>Imagen personalizada</span><input id="image-info" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" /><small>PNG, JPG, WEBP o SVG</small></label>
+        <label class="url-field"><span>Enlace del QR1</span><input id="url-info" type="url" required placeholder="https://..." /></label>
+      </article>
+
+      <article class="admin-card admin-card-dark">
+        <div class="card-heading"><span class="number">02</span><div><h2>QR de asistencia</h2><p>El código para ingresar a la aplicación.</p></div></div>
+        <div class="preview-area"><div id="preview-attendance" class="preview-qr"></div><span class="file-state" id="state-attendance">Generado desde el enlace</span></div>
+        <label class="upload-field"><span>Imagen personalizada</span><input id="image-attendance" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" /><small>PNG, JPG, WEBP o SVG</small></label>
+        <label class="url-field"><span>Enlace del QR2</span><input id="url-attendance" type="url" required placeholder="https://..." /></label>
+      </article>
+
+      <div class="form-actions"><button class="save-button" type="submit">Guardar cambios <span>✓</span></button><button class="reset-button" id="reset-images" type="button">Usar QR generados</button><p id="save-message" class="save-message" role="status"></p></div>
+    </form>
+
+    <aside class="admin-note"><strong>Cómo usar la carpeta `qr/`</strong><span>También podés reemplazar directamente `qr1.svg` y `qr2.svg` dentro de la carpeta del proyecto. La página los usará automáticamente cuando no haya una imagen guardada desde este panel.</span></aside>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
