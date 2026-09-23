@@ -139,5 +139,21 @@ h2 { font-size: clamp(34px, 4vw, 52px); color: var(--navy); }.section-intro { ma
   .institutional-logos { padding-top: 8px; padding-bottom: 0; margin-top: -2px; }.institutional-logos p { margin-bottom: 5px; font-size: 8px; }.institutional-featured { height: 38px; margin-bottom: 6px; }.institutional-logo-row { gap: 13px; }.institutional-logo-row img { height: 32px; }
   .main-layout .qr-section { padding-top: 20px; padding-bottom: 10px; }
   .main-layout .section-heading { margin-bottom: 10px; }.main-layout .section-heading h2 { font-size: 36px; }.main-layout .section-intro { margin-top: 5px; font-size: 10px; }
-  .main-layout .qr-grid { gap: 10px; }.main-layout .qr-card { min-height: 220px; padding: 14px 18px; border-radius: 14px; }.main-layout .card-topline { margin-bottom: 7px; }.main-layout .qr-content { grid-template-columns: 170px minmax(0, 1fr); gap: 20px; }.main-layout .qr-frame { width: 170px; height: 170px; border-width: 6px; }.main-layout .card-copy h3 { font-size: 21px; }.main-layout .card-copy p { font-size: 11px; margin-bottom: 9px; }.main-layout .scan-hint { margin-top: 6px; font-size: 9px; }
+  .main-layout .qr-grid { gap: 6px; }.main-layout .qr-card { min-height: 250px; padding: 12px 18px; border-radius: 14px; }.main-layout .card-topline { margin-bottom: 5px; }.main-layout .qr-content { grid-template-columns: 205px minmax(0, 1fr); gap: 18px; }.main-layout .qr-frame { width: 205px; height: 205px; border-width: 6px; }.main-layout .card-copy h3 { font-size: 21px; }.main-layout .card-copy p { font-size: 11px; margin-bottom: 7px; }.main-layout .scan-hint { margin-top: 3px; font-size: 9px; }
+}
+@media (min-width: 1000px) {
+  .institutional-logos { width: 100%; max-width: 480px; padding-top: clamp(8px, 1.2vh, 16px); }
+  .institutional-featured { width: min(88%, 300px); height: clamp(46px, 6vh, 64px); margin-bottom: clamp(8px, 1.2vh, 14px); }
+  .institutional-logo-row { gap: clamp(14px, 2vw, 26px); }
+  .institutional-logo-row img { height: clamp(38px, 5vh, 56px); max-width: 44%; }
+}
+@media (min-width: 1000px) {
+  .institutional-featured { width: min(100%, 450px); height: clamp(69px, 9vh, 90px); }
+  .institutional-logo-row { gap: clamp(18px, 2.5vw, 30px); }
+  .institutional-logo-row img { height: clamp(57px, 7.5vh, 84px); max-width: 46%; }
+}
+@media (min-width: 1000px) {
+  .institutional-featured { width: min(100%, 380px); height: clamp(58px, 7.5vh, 76px); }
+  .institutional-logo-row { gap: clamp(16px, 2.2vw, 26px); }
+  .institutional-logo-row img { height: clamp(48px, 6.3vh, 70px); }
 }
